@@ -10,3 +10,17 @@ to AWS Console
 make sure Instances(running)
 Using public IP address ssh -i to the EC2 instance (CLI VM)
 
+STEP2 Install Jenkins (before installition run apt update to updated the packages and then install JDK)
+
+Pre-Requisites:
+Java (JDK)
+
+Run the below commands to install Java and Jenkins
+Install Java
+
+sudo apt updateVerify Java is Installed
+
+java -version
+sudo apt install openjdk-11-jre
+
+
