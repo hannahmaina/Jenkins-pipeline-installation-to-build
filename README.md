@@ -1,3 +1,4 @@
+<img width="1187" alt="inbund traffic" src="https://github.com/hannahmaina/Jenkins-pipeline-installation-to-build/assets/112791368/04843d6b-e5d6-4d47-87e5-21f334784ea9">
 # Jenkins-pipeline-installation-to-build
 About this project. To Install Jenkins, configure Docker as slave/agent set up cicd, and deploy applications to k8s using Argo CD in GitOps way
 
@@ -39,4 +40,13 @@ To see or check the port jenkins is running into
 run  ps -ef | grep jenkins      to see port 8080
 
 So port 8080 is not acceble to extenal world since traffic is been restricted.
-To access/ Open port 8080 go to security in ec2 instance than click on security group then clik on edit in inbound rules as show below.
+To access/ Open port 8080 go to security in ec2 instance than click on security group then clik on edit in inbound rules, click on add rule save
+
+
+
+
+
+
+
+
+
