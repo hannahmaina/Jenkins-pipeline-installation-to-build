@@ -33,3 +33,10 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 
+**Note: ** By default, Jenkins will not accept any traffic to be accessible to the external world this is beacuse the inbound traffic is (blocked) is restricted by AWS (defult).
+
+To see or check the port jenkins is running into 
+run  ps -ef | grep jenkins      to see port 8080
+
+So port 8080 is not acceble to extenal world since traffic is been restricted.
+To access/ Open port 8080 go to security in ec2 instance than click on security group then clik on edit in inbound rules as show below.
