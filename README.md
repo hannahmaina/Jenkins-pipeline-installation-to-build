@@ -64,20 +64,28 @@ Note: If you are not interested in allowing All Traffic to your EC2 instance 1. 
 After you login to Jenkins, - Run the command to copy the Jenkins Admin Password - sudo cat /var/lib/jenkins/secrets/initialAdminPassword run this in terminal and now  now Im login to Jenkins
 ![jenkpilog](https://github.com/hannahmaina/Jenkins-pipeline-installation-to-build/assets/112791368/5af0fafc-b05e-41a9-bfcf-da839b56a910)
 
-Install the Docker Pipeline plugin in Jenkins:
+Install the Docker Pipeline plugin in Jenkins: So we can run docker as agent. Jeckins will understand if the user excuted job to run as a pipeline 
 
 Log in to Jenkins.
 Go to Manage Jenkins > Manage Plugins.
-In the Available tab, search for "Docker Pipeline".
+In the Available tab, search for "Docker Pipeline". in Jenkins
 Select the plugin and click the Install button.
 Restart Jenkins after the plugin is installed.
 
-Grant Jenkins user and Ubuntu user permission to docker deamon.sudo su - 
-usermod -aG docker jenkins
-usermod -aG docker ubuntu
-systemctl restart docker
+Docker Slave Configuration
+Run the below command to Install Docker
+sudo apt update
+sudo apt install docker.io
 
-Once you are done with the above steps, it is better to restart Jenkins.
+
+
+Grant Jenkins user and Ubuntu user permission to docker deamon.
+sudo su - 
+usermod -aG docker jenkins   (this is to give access to jenkins -makes Jenkins to be part of docker group)
+usermod -aG docker ubuntu     (gives access to user docker demons)
+systemctl restart docker     (this is to restart docker demons)
+
+Once you are done with the above steps, better to restart Jenkins. so restart
 http://<ec2-instance-public-ip>:8080/restart
 
 
