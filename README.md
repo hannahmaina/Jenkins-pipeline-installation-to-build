@@ -61,7 +61,28 @@ http://:8088 my pulic ip address
 After I can change my inbound traffic rule if I want to to below
 Note: If you are not interested in allowing All Traffic to your EC2 instance 1. Delete the inbound traffic rule for your instance 2. Edit the inbound traffic rule to only allow custom TCP port 8080
 
-After you login to Jenkins, - Run the command to copy the Jenkins Admin Password - sudo cat /var/lib/jenkins/secrets/initialAdminPassword - Enter the Administrator password
+After you login to Jenkins, - Run the command to copy the Jenkins Admin Password - sudo cat /var/lib/jenkins/secrets/initialAdminPassword run this in terminal and now  now Im login to Jenkins
+![jenkpilog](https://github.com/hannahmaina/Jenkins-pipeline-installation-to-build/assets/112791368/5af0fafc-b05e-41a9-bfcf-da839b56a910)
+
+Install the Docker Pipeline plugin in Jenkins:
+
+Log in to Jenkins.
+Go to Manage Jenkins > Manage Plugins.
+In the Available tab, search for "Docker Pipeline".
+Select the plugin and click the Install button.
+Restart Jenkins after the plugin is installed.
+
+Grant Jenkins user and Ubuntu user permission to docker deamon.sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker
+
+Once you are done with the above steps, it is better to restart Jenkins.
+http://<ec2-instance-public-ip>:8080/restart
+
+
+
+
 
 
 
