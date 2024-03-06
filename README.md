@@ -41,13 +41,13 @@ run  ps -ef | grep jenkins      to see port 8080
 
 So port 8080 is not acceble to extenal world since traffic is been restricted.
 To access/ Open port 8080 
-
+````
 Go to EC2 > Instances > Click on
 In the bottom tabs -> Click on Security
 the Click on Security groups
 Click on edit inbound rules
 Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed All traffic). click save
-
+`````
 
 
 <img width="1187" alt="inbund traffic" src="https://github.com/hannahmaina/Jenkins-pipeline-installation-to-build/assets/112791368/04843d6b-e5d6-4d47-87e5-21f334784ea9"> 
