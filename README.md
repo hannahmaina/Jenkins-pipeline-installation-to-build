@@ -4,7 +4,7 @@ About this project. To Install Jenkins, configure Docker as slave/agent set up c
 
 Install Jenkins, configure Docker as agent, set up cicd, and deploy applications to k8s.
 
-      steps1-AWS EC2 Instance
+steps1-AWS EC2 Instance
 Create-Instance in AWS EC2
 Launch instancesGo 
 to AWS Console
