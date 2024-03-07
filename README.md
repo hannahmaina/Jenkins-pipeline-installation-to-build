@@ -90,16 +90,21 @@ sudo apt install docker.io
 
 ****Grant Jenkins user and Ubuntu user permission to docker deamon.
 ````
-sudo su - 
+sudo su - jenkins to login to jenkins in terminal
+``
 usermod -aG docker jenkins   (this is to give access to jenkins -makes Jenkins to be part of docker group)
 usermod -aG docker ubuntu     (gives access to user docker demons)
 systemctl restart docker     (this is to restart docker demons)
 ````
+I terminal run command
+s
 ****Once you are done with the above steps, better to restart Jenkins. so restart
 ``
 http://<ec2-instance-public-ip>:8080/restart
 ```
+Now docker agent configuration is now successful install in jenkins plugins and taminal
 
++. Now i can write my first pipeline
 
 
 
